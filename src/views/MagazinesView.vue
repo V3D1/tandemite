@@ -1,23 +1,45 @@
 <script setup lang="ts">
+  import { onMounted, ref, computed } from 'vue'
   import MagazinesHeader from '@/components/magazines/MagazinesHeader.vue'
   import MagazineCard from '@/components/magazines/MagazineCard.vue'
+  import PaginationComponent from '@/components/common/PaginationComponent.vue'
+  import { useCartStore } from '@/stores/CartStore'
+  import { storeToRefs } from 'pinia'
 
-  const magazines = [
-    {
-      id: 1,
-      title: 'Kazus Podatkowy 1(6)2019',
-      price: 98.76,
-      image: '/images/magazines/kazus-1.jpg',
-      vatInfo: '23%'
-    },
-    {
-      id: 2,
-      title: 'Procedury administracyjne i podatkowe 2',
-      price: 98.76,
-      image: '/images/magazines/procedury-2.jpg',
-      vatInfo: '23%'
+  const store = useCartStore()
+  const { products } = storeToRefs(store)
+  const isLoading = ref(false)
+  const error = ref<string | null>(null)
+  const currentPage = ref(1)
+  const itemsPerPage = 8
+
+  const totalPages = computed(() => Math.ceil(products.value.length / itemsPerPage))
+  const paginatedProducts = computed(() => {
+    const start = (currentPage.value - 1) * itemsPerPage
+    const end = start + itemsPerPage
+    return products.value.slice(start, end)
+  })
+
+  const handlePageChange = (page: number) => {
+    currentPage.value = page
+    // przy wiekszej ilosci produktow na strone mozna zastosowac ponizszy kod
+    // window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const fetchMagazines = async () => {
+    isLoading.value = true
+    error.value = null
+
+    try {
+      await store.fetchProducts()
+    } catch (error) {
+      error.value = 'Nie udało się pobrać czasopism'
+    } finally {
+      isLoading.value = false
     }
-  ]
+  }
+
+  onMounted(fetchMagazines)
 </script>
 
 <template>
@@ -28,16 +50,28 @@
         <!-- <img src="@/assets/images/magazines-hero.png" alt="Czasopisma Kazus" /> -->
       </div>
     </div>
-
+    <h1 class="magazines__title">Wyszukaj czasopismo</h1>
     <div class="magazines__content">
-      <div class="magazines__grid">
-        <MagazineCard
-          v-for="magazine in magazines"
-          :key="magazine.id"
-          :title="magazine.title"
-          :price="magazine.price"
-          :image="magazine.image"
-          :vatInfo="magazine.vatInfo"
+      <div v-if="isLoading" class="magazines__loading">Ładowanie czasopism...</div>
+      <div v-else-if="error" class="magazines__error">
+        {{ error }}
+      </div>
+      <div v-else>
+        <div class="magazines__grid">
+          <MagazineCard
+            v-for="product in paginatedProducts"
+            :key="product.id"
+            :id="product.id"
+            :title="product.title"
+            :price="product.price"
+            :image="product.image_url"
+            :vatInfo="product.vat"
+          />
+        </div>
+        <PaginationComponent
+          :current-page="currentPage"
+          :total-pages="totalPages"
+          :on-page-change="handlePageChange"
         />
       </div>
     </div>
@@ -70,9 +104,29 @@
       }
     }
 
+    &__title {
+      @include m.container;
+      color: v.$color-primary;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: v.$spacing-xl;
+      margin-bottom: v.$spacing-xl;
+    }
+
     &__content {
       @include m.container;
       padding: v.$spacing-xl 0;
+    }
+
+    &__loading,
+    &__error {
+      text-align: center;
+      padding: v.$spacing-xl;
+      font-size: v.$font-size-lg;
+    }
+
+    &__error {
+      color: v.$color-error;
     }
 
     &__grid {
