@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Kazus Podatkowy 1(6)2019",
+    "price": 98.76,
+    "vat": "23%"
+  },
+  {
+    "id": 2,
+    "image_url": "procedury.png",
+    "title": "Procedury Administracyjne i Podatkowe 2",
+    "price": 98.76,
+    "vat": "23%"
+  },
+  {
+    "id": 3,
+    "image_url": "prawo_pomocy_publicznej.png",
+    "title": "Prawo Pomocy Publicznej 2021",
+    "price": 98.76,
+    "vat": "23%"
+  },
+  {
+    "id": 4,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Kazus Podatkowy 2(7)2020",
+    "price": 100.5,
+    "vat": "23%"
+  },
+  {
+    "id": 5,
+    "image_url": "prawo_pomocy_publicznej.png",
+    "title": "Prawo Cywilne - Podręcznik",
+    "price": 120.99,
+    "vat": "8%"
+  },
+  {
+    "id": 6,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Kodeks Podatkowy 2022",
+    "price": 85.49,
+    "vat": "23%"
+  },
+  {
+    "id": 7,
+    "image_url": "procedury.png",
+    "title": "Prawo Karne w Praktyce",
+    "price": 110.0,
+    "vat": "5%"
+  },
+  {
+    "id": 8,
+    "image_url": "prawo_pomocy_publicznej.png",
+    "title": "Poradnik Przedsiębiorcy 2023",
+    "price": 75.25,
+    "vat": "23%"
+  },
+  {
+    "id": 9,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Ewidencja VAT - Krok po Kroku",
+    "price": 65.5,
+    "vat": "23%"
+  },
+  {
+    "id": 10,
+    "image_url": "procedury.png",
+    "title": "Nowoczesne Zarządzanie Finansami",
+    "price": 140.0,
+    "vat": "23%"
+  },
+  {
+    "id": 11,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Podstawy Prawa Pracy",
+    "price": 95.99,
+    "vat": "23%"
+  },
+  {
+    "id": 12,
+    "image_url": "procedury.png",
+    "title": "Procedury Administracyjne 2023",
+    "price": 98.76,
+    "vat": "23%"
+  },
+  {
+    "id": 13,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Rachunkowość Zarządcza",
+    "price": 125.0,
+    "vat": "23%"
+  },
+  {
+    "id": 14,
+    "image_url": "prawo_pomocy_publicznej.png",
+    "title": "Finanse Publiczne w Polsce",
+    "price": 132.5,
+    "vat": "8%"
+  },
+  {
+    "id": 15,
+    "image_url": "procedury.png",
+    "title": "Prawo Ochrony Środowiska",
+    "price": 102.3,
+    "vat": "23%"
+  },
+  {
+    "id": 16,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Kazusy z Prawa Administracyjnego",
+    "price": 88.76,
+    "vat": "23%"
+  },
+  {
+    "id": 17,
+    "image_url": "procedury.png",
+    "title": "Komentarz do Kodeksu Cywilnego",
+    "price": 150.0,
+    "vat": "23%"
+  },
+  {
+    "id": 18,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Prawo Gospodarcze - Zbiór Zadań",
+    "price": 90.5,
+    "vat": "23%"
+  },
+  {
+    "id": 19,
+    "image_url": "procedury.png",
+    "title": "Prawo Międzynarodowe",
+    "price": 115.0,
+    "vat": "5%"
+  },
+  {
+    "id": 20,
+    "image_url": "prawo_pomocy_publicznej.png",
+    "title": "Prawo Konstytucyjne w Praktyce",
+    "price": 125.99,
+    "vat": "23%"
+  },
+  {
+    "id": 21,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Prawo Handlowe - Studium Przypadków",
+    "price": 99.0,
+    "vat": "23%"
+  },
+  {
+    "id": 22,
+    "image_url": "procedury.png",
+    "title": "Nowy Kodeks Postępowania Cywilnego",
+    "price": 110.75,
+    "vat": "8%"
+  },
+  {
+    "id": 23,
+    "image_url": "prawo_pomocy_publicznej.png",
+    "title": "Ustawa o Ochronie Danych Osobowych",
+    "price": 89.9,
+    "vat": "23%"
+  },
+  {
+    "id": 24,
+    "image_url": "procedury.png",
+    "title": "Praktyczne Aspekty Prawa Pracy",
+    "price": 99.99,
+    "vat": "23%"
+  },
+  {
+    "id": 25,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Poradnik Kadrowego",
+    "price": 79.99,
+    "vat": "23%"
+  },
+  {
+    "id": 26,
+    "image_url": "procedury.png",
+    "title": "Kazus Podatkowy 2023",
+    "price": 98.76,
+    "vat": "23%"
+  },
+  {
+    "id": 27,
+    "image_url": "prawo_pomocy_publicznej.png",
+    "title": "Kodeks Prawa Międzynarodowego",
+    "price": 100.0,
+    "vat": "23%"
+  },
+  {
+    "id": 28,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Zasady Zarządzania Zasobami Ludzkimi",
+    "price": 95.5,
+    "vat": "23%"
+  },
+  {
+    "id": 29,
+    "image_url": "procedury.png",
+    "title": "Rachunkowość Finansowa w Praktyce",
+    "price": 125.0,
+    "vat": "23%"
+  },
+  {
+    "id": 30,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Prawo Gospodarcze 2022",
+    "price": 135.99,
+    "vat": "8%"
+  },
+  {
+    "id": 31,
+    "image_url": "procedury.png",
+    "title": "Prawo Energetyczne",
+    "price": 120.5,
+    "vat": "23%"
+  },
+  {
+    "id": 32,
+    "image_url": "prawo_pomocy_publicznej.png",
+    "title": "Prawo Transportowe - Poradnik",
+    "price": 78.0,
+    "vat": "23%"
+  },
+  {
+    "id": 33,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Kazusy z Prawa Podatkowego",
+    "price": 99.99,
+    "vat": "23%"
+  },
+  {
+    "id": 34,
+    "image_url": "procedury.png",
+    "title": "Prawo Medyczne",
+    "price": 105.5,
+    "vat": "5%"
+  },
+  {
+    "id": 35,
+    "image_url": "prawo_pomocy_publicznej.png",
+    "title": "Etyka w Administracji Publicznej",
+    "price": 88.8,
+    "vat": "23%"
+  },
+  {
+    "id": 36,
+    "image_url": "procedury.png",
+    "title": "Zarządzanie Ryzykiem Finansowym",
+    "price": 110.0,
+    "vat": "8%"
+  },
+  {
+    "id": 37,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Prawo Bankowe - Wprowadzenie",
+    "price": 120.0,
+    "vat": "23%"
+  },
+  {
+    "id": 38,
+    "image_url": "procedury.png",
+    "title": "Kodeks Prawa Rodzinnego",
+    "price": 100.0,
+    "vat": "23%"
+  },
+  {
+    "id": 39,
+    "image_url": "prawo_pomocy_publicznej.png",
+    "title": "Kazusy z Prawa Karnego",
+    "price": 115.99,
+    "vat": "23%"
+  },
+  {
+    "id": 40,
+    "image_url": "kazus_podatkowy.png",
+    "title": "Prawo Spadkowe",
+    "price": 130.0,
+    "vat": "5%"
+  }
+]
