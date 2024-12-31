@@ -7,10 +7,10 @@
     { name: 'O Kazusie', path: '/' },
     { name: 'O Firmie', path: '/' },
     { name: 'Czasopisma', path: '/magazines' },
-    { name: 'Szkolenia', path: '/' },
-    { name: 'Baza wiedzy', path: '/' },
-    { name: 'Kazus TV', path: '/' },
-    { name: 'Kontakt', path: '/' }
+    { name: 'Szkolenia', path: '/about' },
+    { name: 'Baza wiedzy', path: '/about' },
+    { name: 'Kazus TV', path: '/about' },
+    { name: 'Kontakt', path: '/about' }
   ])
 
   const handleLinkClick = () => {

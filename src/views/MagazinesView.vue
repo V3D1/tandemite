@@ -44,12 +44,7 @@
 
 <template>
   <div class="magazines">
-    <div class="magazines__hero">
-      <MagazinesHeader />
-      <div class="magazines__hero-image">
-        <!-- <img src="@/assets/images/magazines-hero.png" alt="Czasopisma Kazus" /> -->
-      </div>
-    </div>
+    <MagazinesHeader />
     <h1 class="magazines__title">Wyszukaj czasopismo</h1>
     <div class="magazines__content">
       <div v-if="isLoading" class="magazines__loading">Ładowanie czasopism...</div>
@@ -80,36 +75,12 @@
 
 <style lang="scss" scoped>
   .magazines {
-    &__hero {
-      background-color: v.$color-primary;
-      padding: v.$spacing-xl * 2 0;
-      position: relative;
-      overflow: hidden;
-
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: v.$spacing-xl;
-      align-items: center;
-
-      @include m.container;
-    }
-
-    &__hero-image {
-      display: flex;
-      justify-content: flex-end;
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-    }
-
     &__title {
       @include m.container;
       color: v.$color-primary;
       font-size: 2rem;
       font-weight: 700;
-      margin-top: v.$spacing-xl;
+      margin-top: v.$spacing-xl * 2.5;
       margin-bottom: v.$spacing-xl;
     }
 
@@ -132,7 +103,7 @@
     &__grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: v.$spacing-xl;
+      gap: v.$spacing-base;
       margin-top: v.$spacing-xl;
     }
   }

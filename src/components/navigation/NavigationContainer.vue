@@ -41,10 +41,12 @@
 
 <style lang="scss" scoped>
   .header {
+    height: 80px;
     background-color: v.$color-white;
     padding: v.$spacing-base 0;
     border-bottom: 1px solid v.$color-header;
     position: relative;
+    z-index: 2;
 
     &__container {
       @include m.container;
