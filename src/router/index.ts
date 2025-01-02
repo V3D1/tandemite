@@ -55,10 +55,10 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title} | Kazus podatkowy`
 
-  const metaDescription = document.querySelector('meta[name="description"]')
-  if (metaDescription) {
-    metaDescription.setAttribute('content', to.meta.description || '')
-  }
+  // const metaDescription = document.querySelector('meta[name="description"]')
+  // if (metaDescription) {
+  //   metaDescription.setAttribute('content', to.meta.description || '')
+  // }
 
   if (to.meta.requiresAuth) {
     // logika sprawdzania autoryzacji
