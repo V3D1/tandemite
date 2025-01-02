@@ -46,6 +46,7 @@
       flex-direction: column;
       align-items: center;
       gap: v.$spacing-lg * 2;
+      margin-top: v.$spacing-lg * 3;
       margin-right: 0;
     }
 
