@@ -3,6 +3,8 @@
   import { useRoute } from 'vue-router'
   import { useCartStore } from '@/stores/CartStore'
   import { storeToRefs } from 'pinia'
+  import ImageComponent from '@/components/common/ImageComponent.vue'
+  import ButtonComponent from '@/components/common/ButtonComponent.vue'
 
   const route = useRoute()
   const store = useCartStore()
@@ -52,7 +54,7 @@
     <div v-else-if="!magazine" class="magazine-details__error">Nie znaleziono magazynu</div>
     <div v-else class="magazine-details__content">
       <div class="magazine-details__image">
-        <img :src="magazine.image_url" :alt="magazine.title" />
+        <ImageComponent :src="magazine.image_url" width="175px" :alt="magazine.title" lazy />
       </div>
       <div class="magazine-details__info">
         <h1 class="magazine-details__title">{{ magazine.title }}</h1>
@@ -71,9 +73,9 @@
           <span class="magazine-details__quantity-value">{{ quantity }}</span>
           <button class="magazine-details__quantity-btn" @click="incrementQuantity">+</button>
         </div>
-        <button class="magazine-details__button" @click="addToCart">
-          Dodaj do koszyka ({{ quantity }})
-        </button>
+        <ButtonComponent variant="primary" @click="addToCart"
+          >Dodaj do koszyka ({{ quantity }})</ButtonComponent
+        >
       </div>
     </div>
   </div>
@@ -98,11 +100,8 @@
     &__image {
       width: 100%;
       padding-top: 60px;
-      text-align: center;
-
-      img {
-        width: 180px;
-        height: auto;
+      & > div {
+        margin-left: auto;
       }
     }
 
@@ -144,7 +143,6 @@
       padding: v.$spacing-base v.$spacing-xl;
       font-size: v.$font-size-base;
       font-weight: 600;
-      border-radius: 4px;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
@@ -179,7 +177,6 @@
         color: v.$color-primary;
         font-size: v.$font-size-lg;
         cursor: pointer;
-        border-radius: 4px;
         transition: all 0.3s ease;
 
         &:hover:not(:disabled) {

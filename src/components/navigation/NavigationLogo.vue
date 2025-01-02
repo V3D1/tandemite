@@ -1,7 +1,7 @@
 <template>
   <RouterLink to="/" class="logo" aria-label="Przejdź do strony głównej">
     <img
-      src="@/assets/images/Group 412.svg"
+      src="@/assets/images/logo.svg"
       alt="Logo Tandemite"
       class="logo__image"
       width="167"

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import ImageComponent from '@/components/common/ImageComponent.vue'
   interface Props {
     title: string
     price: number
@@ -14,7 +15,7 @@
   <RouterLink :to="`/magazines/${id}`" class="magazine-card">
     <article class="magazine-card__container">
       <div class="magazine-card__image">
-        <img :src="image" :alt="title" />
+        <ImageComponent :src="image" width="164px" :alt="title" lazy />
       </div>
       <div class="magazine-card__content">
         <h3 class="magazine-card__title">{{ title }}</h3>
@@ -35,6 +36,11 @@
     position: relative;
     padding-top: 120px;
     width: 90%;
+
+    @include m.responsive('mobile') {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     &__container {
       padding-top: 60px;
@@ -62,12 +68,6 @@
       left: 50%;
       transform: translateX(-50%);
       z-index: 1;
-
-      img {
-        max-width: 200px;
-        height: auto;
-        transition: transform 0.3s ease;
-      }
     }
 
     &__content {

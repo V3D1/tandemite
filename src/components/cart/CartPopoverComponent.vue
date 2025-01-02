@@ -1,9 +1,9 @@
 <script setup lang="ts">
   import IconComponent from '@/components/common/IconComponent.vue'
+  import ButtonComponent from '@/components/common/ButtonComponent.vue'
   import { computed } from 'vue'
   import { useCartStore } from '@/stores/CartStore'
   import { storeToRefs } from 'pinia'
-  import { useRouter } from 'vue-router'
   import book from '@/assets/icons/book.svg'
   import rubbishBin from '@/assets/icons/rubbishBin.svg'
 
@@ -15,18 +15,12 @@
     close: []
   }>()
 
-  const router = useRouter()
   const store = useCartStore()
   const { items: cartItems } = storeToRefs(store)
   const totalPrice = computed(() => store.totalPrice)
 
   const handleRemoveItem = (itemId: number) => {
     store.removeItem(itemId)
-  }
-
-  const goToCart = () => {
-    router.push('/cart')
-    emit('close')
   }
 </script>
 
@@ -61,7 +55,9 @@
             </div>
             <div class="cart-popover__item-price">
               <span class="cart-popover__label">Cena</span>
-              <span class="cart-popover__value">{{ item.price.toFixed(2) }} PLN</span>
+              <span class="cart-popover__value"
+                >{{ item.quantity + ' x' }} {{ item.price.toFixed(2) }} PLN</span
+              >
             </div>
           </div>
         </div>
@@ -74,7 +70,7 @@
               <span class="cart-popover__vat">+ VAT 23%</span>
             </div>
           </div>
-          <button class="cart-popover__button" @click="goToCart">PRZEJDŹ DO KOSZYKA</button>
+          <ButtonComponent variant="highlight">PRZEJDŹ DO KOSZYKA</ButtonComponent>
         </div>
       </div>
     </div>
@@ -241,7 +237,6 @@
       letter-spacing: 2.4px;
       color: v.$color-white;
       border: none;
-      font-weight: 500;
       cursor: pointer;
       transition: background-color 0.2s ease;
 

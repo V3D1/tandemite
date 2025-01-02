@@ -5,12 +5,12 @@
 
   const menuItems = ref([
     { name: 'O Kazusie', path: '/' },
-    { name: 'O Firmie', path: '/' },
+    { name: 'O Firmie', path: '/o_firmie' },
     { name: 'Czasopisma', path: '/magazines' },
-    { name: 'Szkolenia', path: '/about' },
-    { name: 'Baza wiedzy', path: '/about' },
-    { name: 'Kazus TV', path: '/about' },
-    { name: 'Kontakt', path: '/about' }
+    { name: 'Szkolenia', path: '/szkolenia' },
+    { name: 'Baza wiedzy', path: '/baza_wiedzy' },
+    { name: 'Kazus TV', path: '/tv' },
+    { name: 'Kontakt', path: '/kontakt' }
   ])
 
   const handleLinkClick = () => {
