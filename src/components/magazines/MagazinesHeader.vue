@@ -31,6 +31,9 @@
 <style lang="scss" scoped>
   .magazines-header-wrapper {
     background-color: v.$color-primary;
+    @include m.responsive('mobile') {
+      overflow: hidden;
+    }
   }
   .magazines-header {
     @include m.flex(row, space-between, center);
@@ -89,6 +92,11 @@
       margin-left: v.$spacing-lg * 2;
 
       @include m.responsive('mobile') {
+        margin: 0;
+        img {
+          max-width: 200px;
+          height: auto;
+        }
         margin-top: 10px;
         margin-left: v.$spacing-lg;
       }

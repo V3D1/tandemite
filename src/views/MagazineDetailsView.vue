@@ -103,6 +103,11 @@
       & > div {
         margin-left: auto;
       }
+      @include m.responsive('mobile') {
+        & > div {
+          margin-left: v.$spacing-xl * 2 !important;
+        }
+      }
     }
 
     &__info {

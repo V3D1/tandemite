@@ -123,7 +123,7 @@
         bottom: 0;
         background-color: v.$color-white;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         padding: v.$spacing-xl;
         z-index: 90;

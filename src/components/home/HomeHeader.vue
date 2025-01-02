@@ -144,6 +144,10 @@
         color: v.$color-secondary;
         margin-bottom: v.$spacing-sm;
         gap: v.$spacing-sm;
+        @include m.responsive('mobile') {
+          @include m.flex(column, center, center);
+          text-align: center;
+        }
       }
     }
 
