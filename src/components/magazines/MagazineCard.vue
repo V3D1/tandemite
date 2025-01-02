@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import ImageComponent from '@/components/common/ImageComponent.vue'
+
   interface Props {
     title: string
     price: number
